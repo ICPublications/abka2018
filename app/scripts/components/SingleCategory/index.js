@@ -40,7 +40,6 @@ export class SingleCategory extends React.Component{
         return(
             <div className="singlecategory">
                 <h4>{this.props.categoryName}</h4>
-                <h5>2017's Winner: <span>{this.props.lastYearsWinner}</span></h5>
                 {this.getEngFlag(this.props.engLink)}
                 {this.getFrFlag(this.props.frLink)}
                 <p>
