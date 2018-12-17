@@ -1,6 +1,6 @@
 import React from 'react';
 import NavItem from './NavItem/index.js';
-import logoLight from 'images/logo-light.png';
+import logoLight from 'images/00000.png';
 
 export class Navbar extends React.Component{
     componentDidMount(){

@@ -18,6 +18,88 @@ export class PreviousWinners extends React.Component{
         return(
         <div id="yea">
             <div className="year-row row initial">
+                <h4 className="winner-title">-<span>&#x25b8; 2018 ABKA Winners</span></h4>
+                <div className="winner-content">
+                    <div className="year col-xs-12 col-md-4">
+                        <h3>2018</h3>
+                    </div>
+                    <div className="winnersbyyear col-xs-12 col-md-8">
+                        <div className="col-xs-6">
+                            <h4>African Bank of the Year</h4>
+                            <h5>Equity Group Holdings Plc, Kenya</h5>
+                        </div>
+                        <div className="col-xs-6">
+                            <h4>African Banker of the Year</h4>
+                            <h5>James Mwangi, Equity Group Holdings Plc, Kenya</h5>
+                        </div>
+                        <div className="col-xs-6">
+                            <h4>Central Bank Governor of the Year</h4>
+                            <h5>Dr Benno Ndulu</h5>
+                        </div>
+                        <div className="col-xs-6">
+                            <h4>Socially Responsible Bank of the Year</h4>
+                            <h5>BMCE Bank of Africa Group</h5>
+                        </div>
+                        <div className="col-xs-6">
+                            <h4>Deal of the Year Ð Equity</h4>
+                            <h5>Steinhof Africa Retail Listing – Rand Merchant Bank (South Africa)</h5>
+                        </div>
+                        <div className="col-xs-6">
+                            <h4>Deal of the Year Ð Debt</h4>
+                            <h5>$300m Diaspora Bond, Nigeria - Standard Bank / FBNQuest Merchant Bank (Nigeria) </h5>
+                        </div>
+                        <div className="col-xs-6">
+                            <h4>Infrastructure Deal of the Year</h4>
+                            <h5>Nacala Railway and Port Corridor - Standard Bank / Rand Merchant Bank (South Africa)</h5>
+                        </div>
+                        <div className="col-xs-6">
+                            <h4>African Banker Icon</h4>
+                            <h5>Waheed A. Olagunju, Bank of Industry</h5>
+                        </div>
+                        <div className="col-xs-6">
+                            <h4>Finance Minister of the Year</h4>
+                            <h5>Amadou Ba (Senegal)</h5>
+                        </div>
+                        <div className="col-xs-6">
+                            <h4>Lifetime Achievement Award</h4>
+                            <h5>Stephen Koseff, co-founder Investec</h5>
+                        </div>
+                        <div className="col-xs-6">
+                            <h4>Innovation in Banking</h4>
+                            <h5>Ecobank</h5>
+                        </div>
+                        <div className="col-xs-6">
+                            <h4>Best Retail Bank in Africa</h4>
+                            <h5>Ecobank</h5>
+                        </div>
+                        <div className="col-xs-6">
+                            <h4>Best Regional Bank in North Africa</h4>
+                            <h5>CIB, Egypt</h5>
+                        </div>
+                        <div className="col-xs-6">
+                            <h4>Best Regional Bank in West Africa</h4>
+                            <h5>BDM (Mali)</h5>
+                        </div>
+                        <div className="col-xs-6">
+                            <h4>Best Regional Bank in Central Africa</h4>
+                            <h5>BGFI, Gabon</h5>
+                        </div>
+                        <div className="col-xs-6">
+                            <h4>Best Regional Bank in East Africa</h4>
+                            <h5>CRDB (Tanzania)</h5>
+                        </div>
+                        <div className="col-xs-6">
+                            <h4>Best Regional Bank in Southern Africa</h4>
+                            <h5>State Bank Mauritius (SBM)</h5>
+                        </div>
+                        <div className="col-xs-6">
+                            <h4>Investment Bank of the Year</h4>
+                            <h5>Standard Bank</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="year-row row">
                 <h4 className="winner-title">-<span>&#x25b8; 2017 ABKA Winners</span></h4>
                 <div className="winner-content">
                     <div className="year col-xs-12 col-md-4">
@@ -51,14 +133,6 @@ export class PreviousWinners extends React.Component{
                         <div className="col-xs-6">
                             <h4>Infrastructure Deal of the Year</h4>
                             <h5>AFC and Harith Asset Merger (Africa Finance Corporation)</h5>
-                        </div>
-                        <div className="col-xs-6">
-                            <h4>African Banker Icon</h4>
-                            <h5>Waheed A. Olagunju, Bank of Industry</h5>
-                        </div>
-                        <div className="col-xs-6">
-                            <h4>Finance Minister of the Year</h4>
-                            <h5>Amadou Ba (Senegal)</h5>
                         </div>
                         <div className="col-xs-6">
                             <h4>Lifetime Achievement Award</h4>
