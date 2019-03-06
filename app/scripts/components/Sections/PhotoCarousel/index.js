@@ -29,6 +29,10 @@ export class PhotoCarousel extends React.Component{
     render(){
         return(
             <div id="photocarousel">
+            <div className="container-fluid">
+                <h1>Gallery</h1>
+                <h3>See some photos from our previous events below:</h3>
+            </div>
                 <OwlCarousel carouselNo='1' carouselOptions={this.getCarouselOptions()}>
                     <img src='https://africanbusinessmagazine.com/wordpress/wp-content/uploads/2019/02/27453759777_05be043cc8_z.jpg' />
                     <img src='https://africanbusinessmagazine.com/wordpress/wp-content/uploads/2019/02/40516256390_90f995cf60_z.jpg' />

@@ -110,7 +110,7 @@ ReactDOM.render(
             <NavItem href="#firstsplitsection">About</NavItem>
             <NavItem href="#categories">Categories</NavItem>
             <NavItem href="#judging-section">Judging</NavItem>
-            {/* <NavItem href="#programme-section">Programme</NavItem> */}
+            <NavItem href="#photocarousel">Gallery</NavItem> 
             <NavItem href="#venue-section">Venue</NavItem> 
             {/* <NavItem href="#mainsponsor-section">Sponsors</NavItem> */}
             <NavItem href="#contact-section">Contacts</NavItem>
