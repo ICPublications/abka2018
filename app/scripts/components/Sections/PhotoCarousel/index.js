@@ -30,12 +30,13 @@ export class PhotoCarousel extends React.Component{
         return(
             <div id="photocarousel">
                 <OwlCarousel carouselNo='1' carouselOptions={this.getCarouselOptions()}>
-                    <img src='http://ic-events.net/wordpress/wp-content/uploads/2016/11/34899958700_dde0bd4b29_k.jpg' />
-                    <img src='http://ic-events.net/wordpress/wp-content/uploads/2016/11/35157346651_8fd313c534_k-1.jpg' />
-                    <img src='http://ic-events.net/wordpress/wp-content/uploads/2016/11/35157294831_81cd22798a_k.jpg' />
-                    <img src='http://ic-events.net/wordpress/wp-content/uploads/2016/11/35287028735_2c824912e0_k.jpg' />
-                    <img src='http://ic-events.net/wordpress/wp-content/uploads/2016/11/35157214851_00f4930456_k.jpg' />
-                    <img src='http://ic-events.net/wordpress/wp-content/uploads/2016/11/35157319681_46e4d91ed5_k.jpg' />
+                    <img src='https://africanbusinessmagazine.com/wordpress/wp-content/uploads/2019/02/27453759777_05be043cc8_z.jpg' />
+                    <img src='https://africanbusinessmagazine.com/wordpress/wp-content/uploads/2019/02/40516256390_90f995cf60_z.jpg' />
+                    <img src='https://africanbusinessmagazine.com/wordpress/wp-content/uploads/2019/02/41379148955_b9af7f1b90_z-1.jpg' />
+                    <img src='https://africanbusinessmagazine.com/wordpress/wp-content/uploads/2019/02/41600657864_a82454982c_z.jpg' />
+                    <img src='https://africanbusinessmagazine.com/wordpress/wp-content/uploads/2019/02/41379149495_4da11df434_z-1.jpg' />
+                    <img src='https://africanbusinessmagazine.com/wordpress/wp-content/uploads/2019/02/41600656634_86dcddbe41_z.jpg' />
+                    <img src='https://africanbusinessmagazine.com/wordpress/wp-content/uploads/2019/02/41379149365_4273253090_z.jpg' />
                 </OwlCarousel>
             </div>
         )

@@ -10,7 +10,7 @@ module.exports = {
     entry: [ 'webpack-hot-middleware/client?reload=true' , './app/scripts/libs/index.js'], //Can also use "main" property
     output: {
         path: path.resolve(__dirname, 'dist'), //resolves the absolute path 
-        filename: '[name].bundle.js', //
+        filename: '[name].bundle.[hash].js', //
         publicPath: '/'
     },
     devtool: 'inline-source-map',
@@ -37,7 +37,11 @@ module.exports = {
             {
                 test: /\.(jpg|png|svg|gif)$/,
                 use:['file-loader']
-            },            
+            },  
+            {
+                test: /\.(ico)$/,
+                loader: 'file-loader?name=[name].[ext]' 
+            },          
             {
                 test: /\.(woff|woff2|eot|ttf|otf)$/,
                 use: ['file-loader']

@@ -11,7 +11,7 @@ export class CompanyCarousel extends React.Component{
     getCarouselOptions(){
         var carouselOptions = {   
             startPosition: 2,
-            loop: true,
+            loop: false,
             center:true,
             margin:50,
             autoplay: true,
