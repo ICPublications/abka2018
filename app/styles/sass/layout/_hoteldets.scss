@@ -1,5 +1,7 @@
 #hoteldets{
-    height:50%;
+    height: 50%;
+    overflow: scroll;
+    overflow-x: hidden;
     @media #{$break-small}{
         height:auto;
     }
@@ -15,7 +17,7 @@
             float:none;
             transform: none !important;
         }
-        @extend .vertical-center;
+       
         >p{
             &:first-child{
                 border-right:1px solid $darkgrey;

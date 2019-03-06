@@ -14,6 +14,7 @@ import SplitSectionText from 'components/Sections/SplitSection/text.js';
 import SplitSectionImage from 'components/Sections/SplitSection/image.js';
 import SplitSectionEmpty from 'components/Sections/SplitSection/empty.js';
 import SSI from 'images/ssi.jpg';
+import Judge from 'components/Judge/index.js';
 import SponsorsByCategory from 'components/SponsorsByCategory/index.js';
 import Sections from 'components/Sections/index.js';
 import FeedBox from 'components/FeedBox/index.js';
@@ -26,7 +27,7 @@ import Navbar from 'components/Navbar/index.js';
 import NavItem from 'components/Navbar/NavItem/index.js';
 import ScrollingDownload from 'components/ScrollingDownload/index.js';
 import PreviousWinners from 'components/PreviousWinners/index.js';
-
+import MyMapComponent from 'components/MyMapComponent/index.js'
 const categoriesArray = 
 [
     {categoryName:'African Bank of the Year', lastYearsWinner:'Equity Group Holdings Plc, Kenya', engLink: 'https://icpublications.formstack.com/forms/african_bank_of_the_year_2018', frLink: '', postID:'1', description: 'This award goes to the bank in Africa that has demonstrated a high performance across various metrics. It will have considerably changed the banking landscape by reaching out to new customers, offering new services, adopting inclusiveness by bringing the unbanked into the banking space, making use of new technologies, and helping to drive growth through a stronger financial sector'}, 
@@ -54,11 +55,21 @@ const scheduleItems = scheduleItemsArray.map((scheduleItem) =>
     <ScheduleItem key={scheduleItem.postID} itemName={scheduleItem.name} itemTime={scheduleItem.time} itemDescription={scheduleItem.desctription}></ScheduleItem>
 );
 
+const judges = 
+[
+    {judgeName: 'Zemedeneh Negatu', position: 'Global Chairman of Fairfax Africa Fund, LLC (U.S.)', headshoutURL:'http://ic-events.net/wordpress/wp-content/uploads/2018/04/Alain-Le-Noir-web-2.jpg', postID:'229290', bio:'An American of Ethiopian origin, Zemedeneh has advised Wall Street investment banks, Governments, Sovereign Wealth Funds and multinational corporations in various sectors including financial services, airlines and consumer products. Zemedeneh was the founder of Ernst & Young Ethiopia and had served as its Managing Partner for 18 years. He was recently appointed the Global Chairman of the American investment firm Fairfax African Fund, LLC, based in Washington D.C. Zemedeneh is also the Chairman of the African subsidiary of one of the largest and best known European multi-national fashion design and manufacturing companies.Zemedeneh has a business degree from Howard University, Washington D.C., completed the LSE program at the Harvard Business School, Boston and is a U.S. C.P.A.'},
+    {judgeName: 'Tom Minney', position: 'Editor African Capital Markets News', headshoutURL:'http://ic-events.net/wordpress/wp-content/uploads/2018/04/Alain-Le-Noir-web-1.jpg', postID:'229291', bio: 'Tom Minney has run capital markets and businesses for over 19 years in Africa and specialises in finance, business strategy and communications. His experience includes being general manager of the Namibian Stock Exchange (in a period of fast growth); a founding member of the SADC Committee of Stock Exchanges; investment banking and private equity; helping set up an innovative investment firm in Ethiopia; and working with fair trade and other companies on strategy and capital raising. He advises on capital markets strategy and is a writer, analyst, journalist and speaker. He edits the African Capital Markets News blog and writes for a range of magazines.'},
+    {judgeName: 'Koosum Kalayan', position: 'Chairman EdgoMerap', headshoutURL:'http://ic-events.net/wordpress/wp-content/uploads/2018/04/koosum-web.jpg', postID:'229292', bio: 'Koosum Kalyan is Chairman of EdgoMerap Energy Services in London, as well as a non-executive director of MTN Group Ltd, Standard Bank Group, Petmin Mining, Hayleys Energy Services, and the South African Mint and Bank Note subsidiaries of the South African Reserve Bank. She currently serves on the President’s International Investment Advisory Council in Togo and previously served as Private Sector Liaison on Tony Blair’s Commission for Africa, Chair of the G8 Anti-Corruption Committee, and Advisory Council member of the CBC.'},
+    {judgeName: 'Jean-Louis Ekra', position: 'Former Chairman and President, African Export-Import Bank', postID:'229293', bio: 'Mr. Jean-Louis Ekra is currently Chairman and President of the African Export-Import Bank. Mr. Ekra joined the bank in 1996 as Senior Executive Vice President. He started his banking career with Citibank, subsequently served as Partner of DKS Investment in Jersey, Country Manager for the West African Economic and Monetary Union (UEMOA) and Managing Director of the Ivorian Post Office. He currently serves as a Member of Advisory Board at Africa Investor Ltd. He was, in 2004, awarded the Chevalier de l\'Ordre National of Ivory Coast. Mr. Ekra holds an MBA from the Stern School of Business, New York and a Maîtrise en Sciences Economiques from the University of Abidjan, Côte d’Ivoire.', headshoutURL:'http://ic-events.net/wordpress/wp-content/uploads/2018/04/jean-louis-web.jpg'},
+    {judgeName: 'Christopher Hartland-Peel', position: 'Principal Hartland-Peel Africa Equity Research Christopher', headshoutURL:'http://ic-events.net/wordpress/wp-content/uploads/2018/04/chriistopher-hartland-web.jpg', postID:'229294', bio: 'Hartland-Peel has worked exclusively on sub-Saharan Africa since 1990 and has maintained a database of African companies and stock markets that is one of the most comprehensive in the world. He has worked extensively in emerging markets – with the IFC in Washington DC, the AfDB and USAID, and Standard Bank and Exotix in London. In the 1990s he was based in Nairobi, working on privatisation and financial market development, where he realised there was little or no effective research done on sub-Saharan stock markets. He has written a book, African Equities: A Guide to Markets and Companies, published by Euromoney'},
+    {judgeName: 'Alan Le Noir', position: 'Founder and Special Advisor to the President of the Club of the Directors of Banks and Credit Institutions in Africa', headshoutURL:'http://ic-events.net/wordpress/wp-content/uploads/2018/04/Alain-Le-Noir-web.jpg', postID:'229295', bio: 'Alain Le Noir graduated in banking and finance. After working in a French bank for 13 years he joined the Training Centre of the Banking Industry in France before relocating to Africa. In his capacity as General Delegate, he directed training courses for 25 countries in Africa and the Indian Ocean. For 20 years, he was the Executive Secretary of the Club of the Directors of Banks and Credit Institutions in Africa, which he founded in 1989. He is today the special advisor to the president of the club. Independent administrator of several banks in the franc zone, he writes regularly in the French edition of African Banker. He is co-author of the book "Banks and Finance in Africa: the actors of the emergence".' }
+];
+
 const sponsors = 
 [
-{/* {sponsorName: 'afdb', sponsorCategory: 'highpatron', companyLogoURL:'http://ic-events.net/wordpress/wp-content/uploads/2018/02/logos-abka-.png',companyLightLogoURL:'http://ic-events.net/wordpress/wp-content/uploads/2018/02/adf-light.png', companyURL:'https://www.afdb.org/', postID:'229290'},
+{ sponsorName: 'afdb', sponsorCategory: 'highpatron', companyLogoURL:'http://ic-events.net/wordpress/wp-content/uploads/2018/02/logos-abka-.png',companyLightLogoURL:'http://ic-events.net/wordpress/wp-content/uploads/2018/02/adf-light.png', companyURL:'https://www.afdb.org/', postID:'229290'},
     {sponsorName: 'agf', sponsorCategory: 'platinum', companyLogoURL:'http://ic-events.net/wordpress/wp-content/uploads/2018/02/agf-1.png',companyLightLogoURL:'http://ic-events.net/wordpress/wp-content/uploads/2018/02/adf-light.png', companyURL:'http://www.africanguaranteefund.com', postID:'229292'}
-*/}
+
 ];
 const sponsorTypes = 
 [
@@ -80,6 +91,12 @@ const sponsorHeadings = sponsorTypes.map((sponsorType) =>
     }   
     return <SponsorsByCategory key={sponsorType.catID} sponsorCategoryType={sponsorType.categoryType} sponsorCategoryDisplayName={sponsorType.categoryName} sponsorArray={associatedSponsors}></SponsorsByCategory> 
 });
+
+const judgeDets = judges.map((judge) =>
+{
+    return <Judge key={judge.postID} name={judge.judgeName} position={judge.position} bio={judge.bio} img={judge.headshoutURL}></Judge>
+});
+
 
 
 let extraHTML = <img className="col-xs-12 col-md-4" src={landingcornerpiece} style={{position:'absolute', top:'0', right:'0', paddingRight:'0'}} />
@@ -104,12 +121,12 @@ ReactDOM.render(
                 <h4 style={{fontWeight:'normal', color: '#379823'}}>Location and Date TBC</h4>
                 <hr style={{borderTop: '1px solid darkgrey'}} />
                 <p>The African Banker Awards are designed to recognize the reforms, rapid modernisation, consolidation, integration and expansion of Africa’s banking and financial system.</p>
-                <div className="entryinfo">
+                <div className="entryinfo" style={{display:'none'}}>
                     <p>We are now receiving entries for the 12th edition of the African Banker Awards.</p> 
-                    <p>Submit your entry here by  Monday 20th March 2018 at 23.59 GMT.</p>
+                    <p>Submit your entry here by Saturday 31st March 2018 at 23.59 GMT.</p>
                 </div>
-                <a target="_blank" href="https://www.eventbrite.co.uk/e/african-banker-awards-2018-tickets-43207317249"><button className="darkgreen-btn col-xs-12 col-sm-4 col-md-4">Book your place</button></a>
-                <a target="_blank" href="https://icpublications.formstack.com/forms/african_banker_awards_2018 "><button className="darkoutline-btn col-xs-12 col-sm-4 col-md-4" >Entry Form</button></a>
+                <a target="_blank" href="https://www.eventbrite.co.uk/e/african-banker-awards-2018-tickets-43207317249"><button className="darkgreen-btn col-xs-12 col-sm-8 col-md-8">Book your place</button></a>
+                <a target="_blank" style={{display:'none '}} href="https://icpublications.formstack.com/forms/african_banker_awards_2018 "><button className="darkoutline-btn col-xs-12 col-sm-4 col-md-4" >Entry Form</button></a>
 
 
             </div>
@@ -155,11 +172,12 @@ ReactDOM.render(
             <PhotoCarousel></PhotoCarousel>
         </Sections>
         <Sections id="judging-section" typeClass="normal" containerType="container">
-            <h1>Judging</h1>
-            <div>
+            <h1>Judges</h1>
+                <div className="row">
+                    {judgeDets}
+                </div>
                 <h3 className="col-xs-12 col-md-4">The Selection and Judging Process</h3>
-                <p className="col-xs-12">Following a call for entries our advisory committee shortlists nominees for each category from the pool of submissions. The committee is made up of our editorial board and experts with an in-depth knowledge of the African banking and finance sector. Our independent expert judging panel with extensive expertise across the African regions will then select the winners based on a number of specific criteria from the shortlist. The winners will be announced at the Awards ceremony. </p>
-            </div>   
+                <p className="col-xs-12">Following a call for entries our advisory committee shortlists nominees for each category from the pool of submissions. The committee is made up of our editorial board and experts with an in-depth knowledge of the African banking and finance sector. Our independent expert judging panel with extensive expertise across the African regions will then select the winners based on a number of specific criteria from the shortlist. The winners will be announced at the Awards ceremony. </p>  
         </Sections>
         {/*
         
@@ -182,12 +200,22 @@ ReactDOM.render(
                             After a jam packed and successful event last year in India; The African Banker Awards continues on it's movement around Asia into the beautiful city of Busan, South Korea. 
                         </p>
                         <p className="col-xs-12 col-sm-4" style={{fontWeight:'bold'}}>
-                            Exact Location TBC
+                            296 Haeundaehaebyeon-ro,<br />
+                            Jung 1(il)-dong,<br />
+                            Haeundae,<br />
+                            Busan, <br />
+                            South Korea
                         </p>
                     </div>
                 </div>
-                <div id="gmaps" style={{backgroundImage:'url('+mapPlaceholder+')', height:'50%',backgroundSize:'cover',backgroundPosition:'center center', color:'white'}}>
-                    <p style={{textAlign:'center'}} className="vertical-center">Exact Location To be Confirmed...</p>
+                <div id="gmaps" style={{height:'50%',backgroundSize:'cover',backgroundPosition:'center center', color:'white'}}>
+                <MyMapComponent
+                    isMarkerShown
+                    googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places"
+                    loadingElement={<div style={{ height: `100%` }} />}
+                    containerElement={<div style={{ height: `100%` }} />}
+                    mapElement={<div style={{ height: `100%` }} />}
+                    />
                 </div>
             </SplitSectionEmpty>
         </SplitSection>
@@ -200,8 +228,8 @@ ReactDOM.render(
             <ContactBox contactIcon="" contactType="Sponsorships" contactEmail="events@icpublications.com"></ContactBox>
         </Sections>
         <nav id="mobile-bottom-nav" className="visible-xs">
-            <a target="_blank" href="https://www.eventbrite.co.uk/e/african-banker-awards-2018-tickets-43207317249">Book your place</a>
-            <a target="_blank" href="https://icpublications.formstack.com/forms/african_banker_awards_2018">Entry Form</a>
+            <a target="_blank" href="https://www.eventbrite.co.uk/e/african-banker-awards-2018-tickets-43207317249" style={{width:'100%'}}>Book your place</a>
+            <a target="_blank" href="https://icpublications.formstack.com/forms/african_banker_awards_2018" style={{display:'none'}}>Entry Form</a>
         </nav>
     </div>, 
   

@@ -54,7 +54,7 @@ export class ScrollingDownload extends React.Component{
             <a target="_blank" href="https://icpublications.formstack.com/forms/african_banker_awards_2018">
                 <div className="downloadentry">
                     <p>Click Here for Entry Form</p>
-                    <img className="img-responsive" src={download} />
+                    
                 </div>
             </a>
         )

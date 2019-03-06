@@ -1,0 +1,16 @@
+<IfModule mod_expires.c>
+
+# Enable expirations
+ExpiresActive On
+
+# My favicon
+ExpiresByType image/x-icon "access plus 1 year”
+
+# Images
+ExpiresByType image/gif "access plus 1 month"
+ExpiresByType image/png "access plus 1 month"
+ExpiresByType image/jpg "access plus 1 month"
+ExpiresByType image/jpeg "access plus 1 month"
+
+
+</IfModule>

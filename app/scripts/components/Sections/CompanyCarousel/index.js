@@ -9,9 +9,11 @@ export class CompanyCarousel extends React.Component{
     }
 
     getCarouselOptions(){
-        var carouselOptions = {    
+        var carouselOptions = {   
+            startPosition: 2,
+            loop: true,
             center:true,
-            margin:0,
+            margin:50,
             autoplay: true,
             autoplaySpeed: 4000,
             nav: false,
