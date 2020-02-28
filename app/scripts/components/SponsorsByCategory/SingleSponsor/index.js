@@ -10,7 +10,8 @@ export class SingleSponsor extends React.Component{
     render(){
         return(
             <div className={`singlesponsor ${this.getClasses()}` }>
-                <a target="_blank" href={this.props.companyURL}>
+                <p>{this.props.sponsorCat}</p>
+                <a target="_blank" href={this.props.companyURL}>    
                     <img src={this.props.companyLogoURL} className="img-responsive" />
                 </a>
             </div>

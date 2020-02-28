@@ -5,13 +5,13 @@ import SingleSponsor from 'components/SponsorsByCategory/SingleSponsor/index.js'
 
 export class CompanyCarousel extends React.Component{
     getSponsors(){
-        return this.props.logoArray.map((sponsor) => <SingleSponsor typeClass='companycarousel' key={'compCarousel'+ sponsor.postID} companyURL={sponsor.companyURL} companyLogoURL={sponsor.companyLogoURL}></SingleSponsor>);
+        return this.props.logoArray.map((sponsor) => <SingleSponsor typeClass='companycarousel' key={'compCarousel'+ sponsor.postID} companyURL={sponsor.companyURL} companyLogoURL={sponsor.companyLogoURL} sponsorCat={sponsor.categoryName}></SingleSponsor>);
     }
 
     getCarouselOptions(){
         var carouselOptions = {   
             startPosition: 2,
-            loop: false,
+            loop: true,
             center:true,
             margin:50,
             autoplay: true,

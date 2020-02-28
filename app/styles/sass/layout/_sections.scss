@@ -144,6 +144,20 @@ section{
     }
 }
 
+.singlecategory{
+    li{
+        margin-top:10px;
+        font-style:normal;
+        &:last-child{
+            margin-bottom:20px;
+        }
+    }
+}
+
+.card{
+    margin-bottom:30px;
+}
+
 @import '_mainsponsor-section.scss';
 @import '_judging-section.scss';
 @import '_hoteldets.scss';
@@ -154,3 +168,4 @@ section{
 @import '../module/gmaps.scss';
 @import '../module/_navbar.scss';
 @import '_previousevent-section.scss';
+@import '_currentwinners-section.scss';

@@ -21,6 +21,104 @@ export class PreviousWinners extends React.Component{
                 <h4 className="winner-title">-<span>&#x25b8; 2018 ABKA Winners</span></h4>
                 <div className="winner-content">
                     <div className="year col-xs-12 col-md-4">
+                        <h3>2019</h3>
+                    </div>
+                    <div className="winnersbyyear col-xs-12 col-md-8">
+                        <div className="col-xs-6">
+                            <h4>African Bank of the Year</h4>
+                            <h5>Afreximbank</h5>
+                        </div>
+                        <div className="col-xs-6">
+                            <h4>African Banker of the Year</h4>
+                            <h5>Admassu Tadesse – Trade and Development Bank</h5>
+                        </div>
+                        <div className="col-xs-6">
+                            <h4>Central Bank Governor of the Year</h4>
+                            <h5>Tarek Amer, Central Bank Governor, Egypt</h5>
+                        </div>
+                        <div className="col-xs-6">
+                            <h4>Regional Bank of The Year (East Africa)</h4>
+                            <h5>KCB, Kenya</h5>
+                        </div>
+                        <div className="col-xs-6">
+                            <h4>Regional Bank of The Year (West Africa)</h4>
+                            <h5>Orabank</h5>
+                        </div>
+                        <div className="col-xs-6">
+                            <h4>Regional Bank of The Year (North Africa)</h4>
+                            <h5>Banque de l’Habitat (Tunisia)</h5>
+                        </div>
+                        <div className="col-xs-6">
+                            <h4>Regional Bank of The Year (Southern Africa)</h4>
+                            <h5>Mauritius Commercial Bank</h5>
+                        </div>
+                        <div className="col-xs-6">
+                            <h4>Regional Bank of The Year (Central Africa)</h4>
+                            <h5>BGFI, Gabon</h5>
+                        </div>
+                        <div className="col-xs-6">
+                            <h4>Award for Innovation in Financial Services</h4>
+                            <h5>KCB - Kenya</h5>
+                        </div>
+                        <div className="col-xs-6">
+                            <h4>Special Commendation</h4>
+                            <h5>JUMO, South Africa</h5>
+                        </div>
+                        <div className="col-xs-6">
+                            <h4>Lifetime Achievment Award</h4>
+                            <h5>Sizwe Nxasana, former CEO, First Rand Group</h5>
+                        </div>
+                        <div className="col-xs-6">
+                            <h4>Finance Minister of the Year*</h4>
+                            <h5>Romuald Wadagni, République du Benin</h5>
+                        </div>
+                        <div className="col-xs-6">
+                            <h4>African Banker Icon*</h4>
+                            <h5>Mitchell Elegbe, Founder, Interswitch</h5>
+                        </div>
+                        <div className="col-xs-6">
+                            <h4>Infrastructure Deal of the Year</h4>
+                            <h5>Mozambique Floating LNG - TDB & Credit Agricole</h5>
+                        </div>
+                        <div className="col-xs-6">
+                            <h4>Deal of the Year - Debt</h4>
+                            <h5>Rothschild – $2.2bn Republic of Senegal Dual-Currency Eurobond</h5>
+                        </div>
+                        <div className="col-xs-6">
+                            <h4>Deal of the Year - Equity</h4>
+                            <h5>Vivo IPO - Standard Bank & Rand Merchant Bank (South Africa)</h5>
+                        </div>
+                        <div className="col-xs-6">
+                            <h4>Award for Financial Inclusion</h4>
+                            <h5>Bank of Industry – Nigeria</h5>
+                        </div>
+                        <div className="col-xs-6">
+                            <h4>Special Commendation for their contribution to the development and financing of the Rural Sector</h4>
+                            <h5>Banco Nacional de Guinea Ecuatorial (BANGE)</h5>
+                        </div>
+                        <div className="col-xs-6">
+                            <h4>Socially Responsible Bank of the Year</h4>
+                            <h5>Equity Bank – Kenya</h5>
+                        </div>
+                        <div className="col-xs-6">
+                            <h4>SME Bank of the Year</h4>
+                            <h5>Equity Bank – Kenya</h5>
+                        </div>
+                        <div className="col-xs-6">
+                            <h4>Energy Project of the Year</h4>
+                            <h5>Equity Bank – Kenya</h5>
+                        </div>
+                        <div className="col-xs-6">
+                            <h4>Agri Deal of the Year</h4>
+                            <h5>Equity Bank – Kenya</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="year-row row">
+                <h4 className="winner-title">-<span>&#x25b8; 2018 ABKA Winners</span></h4>
+                <div className="winner-content">
+                    <div className="year col-xs-12 col-md-4">
                         <h3>2018</h3>
                     </div>
                     <div className="winnersbyyear col-xs-12 col-md-8">
@@ -51,6 +149,10 @@ export class PreviousWinners extends React.Component{
                         <div className="col-xs-6">
                             <h4>Infrastructure Deal of the Year</h4>
                             <h5>Nacala Railway and Port Corridor - Standard Bank / Rand Merchant Bank (South Africa)</h5>
+                        </div>
+                        <div className="col-xs-6">
+                            <h4>Award for Financial Inclusion</h4>
+                            <h5>Groupe Crédit Agricole (Morocco)</h5>
                         </div>
                         <div className="col-xs-6">
                             <h4>African Banker Icon</h4>
